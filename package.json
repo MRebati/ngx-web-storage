@@ -1,0 +1,68 @@
+{
+  "name": "ngx-web-storage",
+  "version": "1.0.0",
+  "description": "Angular decorator to save and restore of HTML5 Local&Session Storage",
+  "license": "MIT",
+  "author": "MRebati",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrebati/ngx-web-storage.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mrebati/ngx-web-storage/issues"
+  },
+  "homepage": "https://github.com/mrebati/ngx-web-storage#readme",
+  "scripts": {
+    "analyze": "ng build --prod --build-optimizer --stats-json",
+    "lint": "tslint -p tsconfig.json -c tslint.json 'lib/*/*.ts'",
+    "test": "ng test --code-coverage --watch=false",
+    "site:build": "ng build --prod --build-optimizer",
+    "site:gh": "ng build --prod --build-optimizer --base-href /angular-web-storage/ && gh-pages -d ./dist",
+    "build": "node scripts/build.js",
+    "release:next": "npm run build && cd publish && npm publish --access public --tag next",
+    "release": "npm run build && cd publish && npm publish --access public"
+  },
+  "devDependencies": {
+    "@angular/animations": "~9.0.7",
+    "@angular/common": "~9.0.7",
+    "@angular/compiler": "~9.0.7",
+    "@angular/core": "~9.0.7",
+    "@angular/forms": "~9.0.7",
+    "@angular/http": "~7.2.16",
+    "@angular/platform-browser": "~9.0.7",
+    "@angular/platform-browser-dynamic": "~9.0.7",
+    "@angular/router": "~9.0.7",
+    "core-js": "^3.6.4",
+    "rxjs": "~6.5.4",
+    "zone.js": "~0.10.3",
+    "@angular-devkit/build-angular": "~0.900.7",
+    "@angular/cli": "~9.0.7",
+    "@angular/compiler-cli": "~9.0.7",
+    "@angular/language-service": "~9.0.7",
+    "@types/node": "~13.9.3",
+    "@types/jasmine": "~3.5.9",
+    "@types/jasminewd2": "~2.0.8",
+    "codecov": "^3.6.5",
+    "codelyzer": "~5.2.1",
+    "jasmine-core": "~3.5.0",
+    "jasmine-spec-reporter": "~5.0.0",
+    "karma": "~4.4.1",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage-istanbul-reporter": "~2.1.1",
+    "karma-jasmine": "~3.1.1",
+    "karma-jasmine-html-reporter": "^1.5.2",
+    "protractor": "~5.4.3",
+    "ts-node": "~8.8.1",
+    "tslint": "~6.1.0",
+    "typescript": "~3.8.3",
+    "ngx-highlight-js": "^2.1.1",
+    "ng-packagr": "^9.0.3",
+    "tsickle": "^0.38.1"
+  },
+  "ngPackage": {
+    "lib": {
+      "entryFile": "lib/index.ts"
+    },
+    "dest": "./publish"
+  }
+}
